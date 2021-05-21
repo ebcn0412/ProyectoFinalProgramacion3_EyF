@@ -34,5 +34,10 @@ namespace ProyectoFinalProgramacion3_EyF
             irRegistro.Show();
 
         }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
