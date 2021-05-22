@@ -9,10 +9,13 @@ namespace ProyectoFinalProgramacion3_EyF
 {
     public class archivos
     {
-        public archivos() { }
+        public archivos() { 
+
+        }
+
         public void CargarDatos(ref Usuario[] usuarioArchivo)
         {
-            StreamReader reader = new StreamReader("usuarios.txt");
+            StreamReader reader = new StreamReader(@"C:\Users\ebcn0\source\repos\ProyectoFinalProgramacion3_EyF\ProyectoFinalProgramacion3_EyF\usuarios.txt");
             int size = Convert.ToInt32(reader.ReadLine());
             usuarioArchivo = new Usuario[size];
             for (int index = 0; index < usuarioArchivo.Length; index++)
@@ -31,7 +34,7 @@ namespace ProyectoFinalProgramacion3_EyF
         public void AgregarUsuario(ref Usuario[] usuarioArchivo, string nombre, string nick, string contraseña,
             string feecha, string pick)
         {
-            StreamWriter escribir = new StreamWriter("usuarios.txt");
+            StreamWriter escribir = new StreamWriter(@"C:\Users\ebcn0\source\repos\ProyectoFinalProgramacion3_EyF\ProyectoFinalProgramacion3_EyF\usuarios.txt");
             escribir.WriteLine(usuarioArchivo.Length + 1);
             Usuario usuNue = new Usuario();
 
@@ -54,16 +57,16 @@ namespace ProyectoFinalProgramacion3_EyF
 
 
 
-        //Metodo para mostrar la informacion de un txt
-        public static void MostrarTodo(Usuario[] usuarioArchivo)
-        {
-            for (int index = 0; index < usuarioArchivo.Length; index++)
-            {
-                Console.WriteLine("Id: \t\t{0}", index);
-                usuarioArchivo[index].MostrarInformacion();
-            }
+        ////Metodo para mostrar la informacion de un txt
+        //public static void MostrarTodo(Usuario[] usuarioArchivo)
+        //{
+        //    for (int index = 0; index < usuarioArchivo.Length; index++)
+        //    {
+        //        Console.WriteLine("Id: \t\t{0}", index);
+        //        usuarioArchivo[index].MostrarInformacion();
+        //    }
 
-        }
+        //}
 
 
 

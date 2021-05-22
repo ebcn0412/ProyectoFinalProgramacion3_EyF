@@ -1,5 +1,11 @@
-nombre completo
-nickname
-contrasena
+2
+emilio
+nick
+1234
 fecha
-foto
+vacio
+emilio con
+ebcn
+holaquease
+04/12/1999
+vacio

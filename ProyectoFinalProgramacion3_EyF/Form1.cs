@@ -13,9 +13,9 @@ namespace ProyectoFinalProgramacion3_EyF
     public partial class Form1 : Form
     {
         Usuario usu;
-        usuData usuInfo;
+        usuData usuInfo = new usuData();
         Usuario[] auxTexto;
-        archivos info;
+        archivos info = new archivos();
         object data;
         public Form1()
         {
@@ -29,14 +29,6 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            Registro irRegistro = new Registro();
-            irRegistro.Show();
 
         }
 
@@ -82,6 +74,13 @@ namespace ProyectoFinalProgramacion3_EyF
                 //Se la informacion leida de un txt se inserta denuevo a otra lista
                 usuInfo.insertarDatoUsuario(miUsuario);
             }
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Registro irRegistro = new Registro();
+            irRegistro.Show();
         }
     }
 }
