@@ -12,6 +12,11 @@ namespace ProyectoFinalProgramacion3_EyF
 {
     public partial class Form1 : Form
     {
+        Usuario usu;
+        usuData usuInfo;
+        Usuario[] auxTexto;
+        archivos info;
+        object data;
         public Form1()
         {
             InitializeComponent();
@@ -38,6 +43,45 @@ namespace ProyectoFinalProgramacion3_EyF
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //boton para agregar
+            usu = new Usuario(textBox2.Text, textBox1.Text);
+
+            usuarioInfo();
+
+            if (usuInfo.buscarDatosCompletos(usu) != null)
+            {
+                MessageBox.Show("Bienvenido Usuario", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                data = usuInfo.buscarDatosCompletos(usu);
+
+                //PresentacionContenido verCotenido = new PresentacionContenido(retornaDato);
+
+                //this.Hide();
+
+               // verCotenido.Show();
+            }
+
+            else { MessageBox.Show("No esta registrado en nuestros registros", "Error al iniciar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+        }
+
+        void usuarioInfo()
+        {
+            info.CargarDatos(ref auxTexto);
+            //MostrarTodo(miUsuarioNuevo2);
+
+            Usuario miUsuario;
+            for (int index = 0; index < auxTexto.Length; index++)
+            {
+                miUsuario = new Usuario(auxTexto[index].nombreCompleto, auxTexto[index].nickname, auxTexto[index].pass, auxTexto[index].fecha, auxTexto[index].foto);
+                //Se la informacion leida de un txt se inserta denuevo a otra lista
+                usuInfo.insertarDatoUsuario(miUsuario);
+            }
         }
     }
 }

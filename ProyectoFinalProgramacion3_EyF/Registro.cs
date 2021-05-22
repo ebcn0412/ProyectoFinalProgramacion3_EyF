@@ -19,20 +19,20 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (lista.BuscarDatos(txtCorreo.Text) == true)
-            {
-                lista.Crear_Cuentas(txtCorreo.Text, txtContraseña.Text);
-                lista.Datos_Modificados();
-                this.Visible = false;
-                LOGIN LOG = new LOGIN();
-                LOG.Show();
-            }
-            else
-            {
-                MessageBox.Show("Usuario Duplicado");
-                txtCorreo.Text = "";
-                txtContraseña.Text = "";
-            }
+            //if (lista.BuscarDatos(txtCorreo.Text) == true)
+            //{
+            //    lista.Crear_Cuentas(txtCorreo.Text, txtContraseña.Text);
+            //    lista.Datos_Modificados();
+            //    this.Visible = false;
+            //    LOGIN LOG = new LOGIN();
+            //    LOG.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Usuario Duplicado");
+            //    txtCorreo.Text = "";
+            //    txtContraseña.Text = "";
+            //}
 
         }
     }
