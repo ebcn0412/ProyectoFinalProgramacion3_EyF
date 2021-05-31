@@ -65,7 +65,7 @@ namespace ProyectoFinalProgramacion3_EyF
         public void cerrar()
         {
             this.Hide();
-            Form1 inicio = new Form1();
+            Login inicio = new Login();
             inicio.Show();
         }
 

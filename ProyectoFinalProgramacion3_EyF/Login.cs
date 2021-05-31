@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalProgramacion3_EyF
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         Usuario usu;
         usuData usuInfo = new usuData();
         Usuario[] auxTexto;
         archivos info = new archivos();
         object data;
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
