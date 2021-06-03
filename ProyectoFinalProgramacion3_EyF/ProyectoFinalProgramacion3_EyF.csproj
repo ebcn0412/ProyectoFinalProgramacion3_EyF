@@ -78,6 +78,18 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seguidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguidores.Designer.cs">
+      <DependentUpon>Seguidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguidos.Designer.cs">
+      <DependentUpon>Seguidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs" />
     <Compile Include="usuData.cs" />
     <EmbeddedResource Include="Login.resx">
@@ -100,6 +112,12 @@
     </Compile>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguidores.resx">
+      <DependentUpon>Seguidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguidos.resx">
+      <DependentUpon>Seguidos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
