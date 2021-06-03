@@ -33,6 +33,7 @@ namespace ProyectoFinalProgramacion3_EyF
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -41,7 +42,8 @@ namespace ProyectoFinalProgramacion3_EyF
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -75,6 +77,13 @@ namespace ProyectoFinalProgramacion3_EyF
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(876, 413);
             this.panel2.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(113, 17);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(581, 703);
+            this.panel3.TabIndex = 5;
             // 
             // panel1
             // 
@@ -160,12 +169,23 @@ namespace ProyectoFinalProgramacion3_EyF
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // panel3
+            // textBox1
             // 
-            this.panel3.Location = new System.Drawing.Point(113, 17);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(581, 703);
-            this.panel3.TabIndex = 5;
+            this.textBox1.Location = new System.Drawing.Point(309, 22);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(184, 24);
+            this.textBox1.TabIndex = 5;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Location = new System.Drawing.Point(499, 22);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(24, 24);
+            this.button4.TabIndex = 6;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 
@@ -173,6 +193,8 @@ namespace ProyectoFinalProgramacion3_EyF
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(910, 496);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
@@ -188,6 +210,7 @@ namespace ProyectoFinalProgramacion3_EyF
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -205,5 +228,7 @@ namespace ProyectoFinalProgramacion3_EyF
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button4;
     }
 }
