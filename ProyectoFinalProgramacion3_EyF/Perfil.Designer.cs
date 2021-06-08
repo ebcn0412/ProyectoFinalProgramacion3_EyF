@@ -41,8 +41,8 @@ namespace ProyectoFinalProgramacion3_EyF
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -71,18 +71,21 @@ namespace ProyectoFinalProgramacion3_EyF
             this.pictureBox2.Location = new System.Drawing.Point(171, 84);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(104, 86);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Bodoni MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(329, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 29);
+            this.label1.Size = new System.Drawing.Size(20, 29);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Perfil";
+            this.label1.Text = ".";
             // 
             // label2
             // 
@@ -155,6 +158,13 @@ namespace ProyectoFinalProgramacion3_EyF
             this.panel1.Size = new System.Drawing.Size(927, 273);
             this.panel1.TabIndex = 15;
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(76, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(778, 377);
+            this.panel2.TabIndex = 0;
+            // 
             // button4
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
@@ -164,13 +174,6 @@ namespace ProyectoFinalProgramacion3_EyF
             this.button4.Size = new System.Drawing.Size(24, 24);
             this.button4.TabIndex = 16;
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(76, 27);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(778, 377);
-            this.panel2.TabIndex = 0;
             // 
             // Perfil
             // 
@@ -194,6 +197,7 @@ namespace ProyectoFinalProgramacion3_EyF
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Perfil";
             this.Text = "Instagram";
+            this.Load += new System.EventHandler(this.Perfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);

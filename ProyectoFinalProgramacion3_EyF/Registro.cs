@@ -17,6 +17,7 @@ namespace ProyectoFinalProgramacion3_EyF
         usuData auxDatoUsuario;
         Usuario[] auxTexto;
         archivos info = new archivos();
+        string variable;
         public Registro()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace ProyectoFinalProgramacion3_EyF
         private void button1_Click_1(object sender, EventArgs e)
         {
             //boton registrar
-            usu = new Usuario(textBox1.Text, textBox2.Text, textBox4.Text, textBox3.Text,"vacio");
+            usu = new Usuario(textBox1.Text, textBox2.Text, textBox4.Text, textBox3.Text,variable);
 
             agregarUsuarioR();
 
@@ -33,7 +34,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
                 //Ingreso de usuario a mi Txt
                 info.CargarDatos(ref auxTexto);
-                info.AgregarUsuario(ref auxTexto, textBox1.Text, textBox2.Text, textBox4.Text, textBox3.Text, "vacio");
+                info.AgregarUsuario(ref auxTexto, textBox1.Text, textBox2.Text, textBox4.Text, textBox3.Text,variable);
                 
 
                 MessageBox.Show("La cuenta se ha creado exitosamente !!");
@@ -72,6 +73,14 @@ namespace ProyectoFinalProgramacion3_EyF
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                variable = openFileDialog1.FileName;
+            }
         }
     }
 }

@@ -24,6 +24,7 @@ namespace ProyectoFinalProgramacion3_EyF
         //Data_movies.ClsPelicula miPelicula;
         //Data_movies.ClsPelicula[] auxPeliculaTxt;
         //Data_movies.ClsPelicula[] auxPeliculaTxt2;
+        
         public Principal()
         {
             InitializeComponent();
@@ -34,10 +35,85 @@ namespace ProyectoFinalProgramacion3_EyF
             miLista.insertarAlFinal(datoUsuario);
             infoUsuario();
         }
+        public void cargarUsuario()
+        {
+            TextReader leer = new StreamReader("Temp.txt");
+            name = leer.ReadLine();
+            nick = leer.ReadLine();
+            contra = leer.ReadLine();
+            fecha = leer.ReadLine();
+            foto = leer.ReadLine();
+            leer.Close();
+        }
+        public void cargaAvatar()
+        {
+            panel1.Visible = false;
+            pictureBox2.WaitOnLoad = false;
+            cargarUsuario();
+            pictureBox2.LoadAsync(@"" + foto);
+        }
+
+        public void irPerfil()
+        {
+            Perfil salto = new Perfil();
+            salto.Show();
+            this.Hide();
+        }
+        public void irLogin()
+        {
+            Login salto = new Login();
+            salto.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            irPerfil();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            irPerfil();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            irLogin();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            irLogin();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            irLogin();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            irLogin();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            irPerfil();
+        }
+
+        
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+
+        }
+
+
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            cargarUsuario();
+            cargaAvatar();
     
 
         }
@@ -64,17 +140,33 @@ namespace ProyectoFinalProgramacion3_EyF
             escribirDato.Close();
         }
 
-        public void cargarUsuario()
-        {
-            TextReader leer = new StreamReader("Temp.txt");
+        //perfil
+        //public void cargarUsuario()
+        //{
+        //    TextReader leer = new StreamReader("Temp.txt");
 
-            name = leer.ReadLine();
-            nick = leer.ReadLine();
-            contra = leer.ReadLine();
-            fecha = leer.ReadLine();
-            foto = leer.ReadLine();
-            leer.Close();
-        }
+        //    name = leer.ReadLine();
+        //    nick = leer.ReadLine();
+        //    contra = leer.ReadLine();
+        //    fecha = leer.ReadLine();
+        //    foto = leer.ReadLine();
+        //    leer.Close();
+        //}
+
+        //public void cargaAvatar()
+        //{
+        //    panel1.Visible = false;
+        //    pictureBox2.WaitOnLoad = false;
+
+        //    cargarUsuario();
+
+        //    pictureBox2.LoadAsync(@"" + avaUser);
+
+        //    label4.Text = usUser;
+        //    label5.Text = nomUser;
+        //    label6.Text = corrUser;
+
+        //}
 
     } 
 }

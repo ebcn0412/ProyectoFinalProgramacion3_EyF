@@ -49,7 +49,7 @@ namespace ProyectoFinalProgramacion3_EyF
             // 
             this.panel2.Location = new System.Drawing.Point(18, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(295, 523);
+            this.panel2.Size = new System.Drawing.Size(286, 523);
             this.panel2.TabIndex = 0;
             // 
             // label1

@@ -53,9 +53,13 @@ namespace ProyectoFinalProgramacion3_EyF
 
                 //PresentacionContenido verCotenido = new PresentacionContenido(retornaDato);
 
-                //this.Hide();
+                //
 
-               // verCotenido.Show();
+                // verCotenido.Show();
+
+                Principal irA = new Principal(data);
+                this.Hide();
+                irA.Show();
             }
 
             else { MessageBox.Show("No esta registrado en nuestros registros", "Error al iniciar", MessageBoxButtons.OK, MessageBoxIcon.Error); }

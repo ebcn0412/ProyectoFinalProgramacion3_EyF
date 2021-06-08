@@ -15,7 +15,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         public void CargarDatos(ref Usuario[] usuarioArchivo)
         {
-            StreamReader reader = new StreamReader(@"C:\Users\ebcn0\source\repos\ProyectoFinalProgramacion3_EyF\ProyectoFinalProgramacion3_EyF\usuarios.txt");
+            StreamReader reader = new StreamReader("usuarios.txt");
             int size = Convert.ToInt32(reader.ReadLine());
             usuarioArchivo = new Usuario[size];
             for (int index = 0; index < usuarioArchivo.Length; index++)
@@ -34,7 +34,7 @@ namespace ProyectoFinalProgramacion3_EyF
         public void AgregarUsuario(ref Usuario[] usuarioArchivo, string nombre, string nick, string contraseña,
             string feecha, string pick)
         {
-            StreamWriter escribir = new StreamWriter(@"C:\Users\ebcn0\source\repos\ProyectoFinalProgramacion3_EyF\ProyectoFinalProgramacion3_EyF\usuarios.txt");
+            StreamWriter escribir = new StreamWriter("usuarios.txt");
             escribir.WriteLine(usuarioArchivo.Length + 1);
             Usuario usuNue = new Usuario();
 
