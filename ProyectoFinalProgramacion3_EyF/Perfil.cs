@@ -49,18 +49,6 @@ namespace ProyectoFinalProgramacion3_EyF
         {
             ////boton de buscar
 
-            //var = new Usuario();
-            //var.nickname = textBox1.Text;
-            ////miListaPelicula.buscarPelicula(miPelicula);
-            //nodoLista nd = (nodoLista)var.usuarioIgual(var);
-            //if (nodo != null)
-            //{
-            //    MessageBox.Show(nodo.dato.ToString());
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Pelicula no encontrada");
-            //}
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

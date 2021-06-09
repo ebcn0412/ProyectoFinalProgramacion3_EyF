@@ -24,7 +24,10 @@ namespace ProyectoFinalProgramacion3_EyF
         {
             lista = new listaEnlazada();
         }
-
+        public Usuario(string nick)
+        {
+            this.nickname = nick;
+        }
 
         //Contructor General
         public Usuario(string contraseña, string nick, string nombre, string pick, string vFecha )
@@ -57,6 +60,15 @@ namespace ProyectoFinalProgramacion3_EyF
         }
 
         public bool usuarioIgual(object q)
+        {
+            Usuario us2 = (Usuario)q;
+            if (nickname.CompareTo(us2.nickname) == 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool usuarioBuscar(object q)
         {
             Usuario us2 = (Usuario)q;
             if (nickname.CompareTo(us2.nickname) == 0)

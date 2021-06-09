@@ -19,6 +19,8 @@ namespace ProyectoFinalProgramacion3_EyF
     public partial class Principal : Form
     {
         public listaDoble miLista = new listaDoble();
+        Usuario usu;
+        usuData usuInfo = new usuData();
         nodoLD nodoList;
         string name, nick, contra, fecha, foto;
         bool regreso = true;
@@ -95,6 +97,22 @@ namespace ProyectoFinalProgramacion3_EyF
         private void button3_Click(object sender, EventArgs e)
         {
             irLogin();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            usu = new Usuario(textBox1.Text);
+
+            if (usuInfo.buscarUsu(usu) != null)
+            {
+                MessageBox.Show("Bienvenido Usuario", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Perfil irA = new Perfil();
+                this.Hide();
+                irA.Show();
+            }
+
+            else { MessageBox.Show("No esta registrado en nuestros registros", "Error al iniciar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
         }
 
         private void label1_Click_1(object sender, EventArgs e)

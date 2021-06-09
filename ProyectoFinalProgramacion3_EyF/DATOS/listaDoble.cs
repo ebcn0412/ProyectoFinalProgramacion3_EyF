@@ -63,6 +63,28 @@ namespace ProyectoFinalProgramacion3_EyF.DATOS
             }
 
         }
+        public nodoLD buscarNick(object codigoUsuario)
+        {
+            comparador dato;
+            dato = (comparador)codigoUsuario;
+            return buscarNick(dato, inicio);
+        }
+        protected nodoLD buscarNick(comparador codigoUsuario, nodoLD usuario)
+        {
+            if (usuario == null)
+            {
+                //throw new Exception("No encontrado el nodo con la clave");
+                return null;
+            }
+            else
+            {
+                if (codigoUsuario.usuarioIgual(usuario.valorNodo()) && codigoUsuario.usuarioBuscar(usuario.valorNodo()))
+                    return usuario;
+                else
+                    return buscarUsuario(codigoUsuario, usuario.siguienteNodo);
+            }
+
+        }
 
 
 

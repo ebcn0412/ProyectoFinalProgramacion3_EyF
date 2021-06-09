@@ -31,6 +31,14 @@ namespace ProyectoFinalProgramacion3_EyF
             else
                 return null;
         }
+
+        public object buscarUsu(Usuario miUsuario)
+        {
+            if (miLista.buscarNick(miUsuario.nickname) != null)
+                return miLista.buscarNick(miUsuario.nickname);
+            else
+                return null;
+        }
     }
 }
 
