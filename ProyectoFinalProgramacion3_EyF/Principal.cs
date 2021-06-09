@@ -23,6 +23,7 @@ namespace ProyectoFinalProgramacion3_EyF
         usuData usuInfo = new usuData();
         nodoLD nodoList;
         string name, nick, contra, fecha, foto;
+        int contador = 0;
         bool regreso = true;
         //Data_movies.ClsPelicula miPelicula;
         //Data_movies.ClsPelicula[] auxPeliculaTxt;
@@ -113,6 +114,20 @@ namespace ProyectoFinalProgramacion3_EyF
 
             else { MessageBox.Show("No esta registrado en nuestros registros", "Error al iniciar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                contador++;
+                string ruta = openFileDialog1.FileName;
+                panel3.LoadAsync(@"" + ruta);
+                TextWriter escribirDato = new StreamWriter("publicaciones.txt");
+                escribirDato.Write(ruta);
+                escribirDato.WriteLine(contador);
+                escribirDato.Close();
+            }
         }
 
         private void label1_Click_1(object sender, EventArgs e)
