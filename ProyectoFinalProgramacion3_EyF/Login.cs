@@ -17,10 +17,17 @@ namespace ProyectoFinalProgramacion3_EyF
         Usuario[] auxTexto;
         archivos info = new archivos();
         object data;
+        bool bandera;
         public Login()
         {
             InitializeComponent();
         }
+        public Login(bool recibo)
+        {
+            InitializeComponent();
+            bandera = recibo;
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -39,30 +46,31 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //boton para agregar
-            usu = new Usuario(textBox2.Text, textBox1.Text);
-
-            usuarioInfo();
-
-            if (usuInfo.buscarDatosCompletos(usu) != null)
+            if (bandera == false)
             {
-                MessageBox.Show("Bienvenido Usuario", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                data = usuInfo.buscarDatosCompletos(usu);
-
-                //PresentacionContenido verCotenido = new PresentacionContenido(retornaDato);
-
-                //
-
-                // verCotenido.Show();
-
-                Principal irA = new Principal(data);
-                this.Hide();
-                irA.Show();
+                MessageBox.Show("PRESIONE PRIMERO EN EL BOTON DE CARGAR XML");
             }
+            else if (bandera == true)
+            {
+                //boton para agregar
+                usu = new Usuario(textBox2.Text, textBox1.Text);
 
-            else { MessageBox.Show("No esta registrado en nuestros registros", "Error al iniciar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                usuarioInfo();
+
+                if (usuInfo.buscarDatosCompletos(usu) != null)
+                {
+                    MessageBox.Show("Bienvenido Usuario", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    data = usuInfo.buscarDatosCompletos(usu);
+                    Principal irA = new Principal(data);
+                    this.Hide();
+                    irA.Show();
+                }
+
+                else { MessageBox.Show("No esta registrado en nuestros registros", "Error al iniciar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+            }
+            //boton para agregar
+            
 
         }
 
@@ -74,7 +82,7 @@ namespace ProyectoFinalProgramacion3_EyF
             Usuario miUsuario;
             for (int index = 0; index < auxTexto.Length; index++)
             {
-                miUsuario = new Usuario(auxTexto[index].nombreCompleto, auxTexto[index].nickname, auxTexto[index].pass, auxTexto[index].fecha, auxTexto[index].foto);
+                miUsuario = new Usuario(auxTexto[index].pass, auxTexto[index].nickname, auxTexto[index].nombreCompleto, auxTexto[index].foto,  auxTexto[index].fecha);
                 //Se la informacion leida de un txt se inserta denuevo a otra lista
                 usuInfo.insertarDatoUsuario(miUsuario);
             }
@@ -82,9 +90,29 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-            Registro irRegistro = new Registro();
-            irRegistro.Show();
+            if (bandera == false)
+            {
+                MessageBox.Show("PRESIONE PRIMERO EN EL BOTON DE CARGAR XML");
+            }
+            else if (bandera == true)
+            {
+                this.Hide();
+                Registro irRegistro = new Registro();
+                irRegistro.Show();
+
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ARCHIVO XML CARGADO CORRECTAMENTE");
+            bandera = true;
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

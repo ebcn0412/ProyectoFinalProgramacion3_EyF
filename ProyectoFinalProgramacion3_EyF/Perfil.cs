@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using ProyectoFinalProgramacion3_EyF.DATOS;
 
 namespace ProyectoFinalProgramacion3_EyF
 {
     public partial class Perfil : Form
     {
         string name, nick, contra, fecha, foto;
+        Usuario usu = new Usuario();
+        Usuario var;
         public Perfil()
         {
             InitializeComponent();
@@ -21,11 +24,11 @@ namespace ProyectoFinalProgramacion3_EyF
         public void cargarUsuario()
         {
             TextReader leer = new StreamReader("Temp.txt");
-            name = leer.ReadLine();
-            nick = leer.ReadLine();
             contra = leer.ReadLine();
-            fecha = leer.ReadLine();
+            nick = leer.ReadLine();
+            name = leer.ReadLine();
             foto = leer.ReadLine();
+            fecha = leer.ReadLine();
             leer.Close();
         }
         public void cargaAvatar()
@@ -40,6 +43,24 @@ namespace ProyectoFinalProgramacion3_EyF
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ////boton de buscar
+
+            //var = new Usuario();
+            //var.nickname = textBox1.Text;
+            ////miListaPelicula.buscarPelicula(miPelicula);
+            //nodoLista nd = (nodoLista)var.usuarioIgual(var);
+            //if (nodo != null)
+            //{
+            //    MessageBox.Show(nodo.dato.ToString());
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Pelicula no encontrada");
+            //}
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

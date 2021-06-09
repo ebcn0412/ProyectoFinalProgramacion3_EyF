@@ -27,13 +27,14 @@ namespace ProyectoFinalProgramacion3_EyF
 
 
         //Contructor General
-        public Usuario(string nombre, string nick, string contraseña, string vFecha, string pick)
+        public Usuario(string contraseña, string nick, string nombre, string pick, string vFecha )
         {
-            this.nombreCompleto = nombre;
-            this.nickname = nick;
             this.pass = contraseña;
-            this.fecha = vFecha;
+            this.nickname = nick;
+            this.nombreCompleto = nombre;
             this.foto = pick;
+            this.fecha = vFecha;
+
         }
 
         public Usuario(string contraseñaUsu, string usu)
@@ -66,7 +67,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         public override string ToString()
         {
-            return "" + nickname + "" + "&" + nombreCompleto + "&" + pass + "&" + fecha + "&" + foto;
+            return "" + pass + "" + "&" + nickname + "&" + nombreCompleto + "&" + foto + "&" + fecha;
         }
 
 

@@ -174,6 +174,7 @@ namespace ProyectoFinalProgramacion3_EyF
             this.button4.Size = new System.Drawing.Size(24, 24);
             this.button4.TabIndex = 16;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Perfil
             // 

@@ -21,6 +21,7 @@ namespace ProyectoFinalProgramacion3_EyF
         public listaDoble miLista = new listaDoble();
         nodoLD nodoList;
         string name, nick, contra, fecha, foto;
+        bool regreso = true;
         //Data_movies.ClsPelicula miPelicula;
         //Data_movies.ClsPelicula[] auxPeliculaTxt;
         //Data_movies.ClsPelicula[] auxPeliculaTxt2;
@@ -38,11 +39,11 @@ namespace ProyectoFinalProgramacion3_EyF
         public void cargarUsuario()
         {
             TextReader leer = new StreamReader("Temp.txt");
-            name = leer.ReadLine();
-            nick = leer.ReadLine();
             contra = leer.ReadLine();
-            fecha = leer.ReadLine();
+            nick = leer.ReadLine();
+            name = leer.ReadLine();
             foto = leer.ReadLine();
+            fecha = leer.ReadLine();
             leer.Close();
         }
         public void cargaAvatar()
@@ -61,7 +62,7 @@ namespace ProyectoFinalProgramacion3_EyF
         }
         public void irLogin()
         {
-            Login salto = new Login();
+            Login salto = new Login(regreso);
             salto.Show();
             this.Hide();
         }

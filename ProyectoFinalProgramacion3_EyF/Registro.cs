@@ -34,9 +34,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
                 //Ingreso de usuario a mi Txt
                 info.CargarDatos(ref auxTexto);
-                info.AgregarUsuario(ref auxTexto, textBox1.Text, textBox2.Text, textBox4.Text, textBox3.Text,variable);
-                
-
+                info.AgregarUsuario(ref auxTexto, textBox4.Text, textBox2.Text, textBox1.Text,variable, textBox3.Text);
                 MessageBox.Show("La cuenta se ha creado exitosamente !!");
                 cerrar();
           
@@ -54,8 +52,8 @@ namespace ProyectoFinalProgramacion3_EyF
 
             for (int i = 0; i < auxTexto.Length; i++)
             {
-                miUsuario = new Usuario(auxTexto[i].nombreCompleto, auxTexto[i].nickname, auxTexto[i].pass, auxTexto[i].fecha,
-                    auxTexto[i].foto);
+                miUsuario = new Usuario(auxTexto[i].pass, auxTexto[i].nickname, auxTexto[i].nombreCompleto, auxTexto[i].foto,
+                    auxTexto[i].fecha);
 
 
                 //La informacion es leida del txt y se inserta denuevo a otra lista
@@ -81,6 +79,13 @@ namespace ProyectoFinalProgramacion3_EyF
             {
                 variable = openFileDialog1.FileName;
             }
+            pictureBox2.LoadAsync(@"" + variable);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

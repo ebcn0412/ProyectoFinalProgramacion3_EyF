@@ -21,11 +21,11 @@ namespace ProyectoFinalProgramacion3_EyF
             for (int index = 0; index < usuarioArchivo.Length; index++)
             {
                 usuarioArchivo[index] = new Usuario();
-                usuarioArchivo[index].nombreCompleto = reader.ReadLine();
-                usuarioArchivo[index].nickname = reader.ReadLine();
                 usuarioArchivo[index].pass = reader.ReadLine();
-                usuarioArchivo[index].fecha = reader.ReadLine();
+                usuarioArchivo[index].nickname = reader.ReadLine();
+                usuarioArchivo[index].nombreCompleto = reader.ReadLine();
                 usuarioArchivo[index].foto = reader.ReadLine();
+                usuarioArchivo[index].fecha = reader.ReadLine();
             }
             reader.Close();
         }
@@ -40,16 +40,23 @@ namespace ProyectoFinalProgramacion3_EyF
 
             for (int index = 0; index < usuarioArchivo.Length; index++)
             {
-                escribir.WriteLine(usuarioArchivo[index].nombreCompleto);
-                escribir.WriteLine(usuarioArchivo[index].nickname);
                 escribir.WriteLine(usuarioArchivo[index].pass);
-                escribir.WriteLine(usuarioArchivo[index].fecha);
+                escribir.WriteLine(usuarioArchivo[index].nickname);
+                escribir.WriteLine(usuarioArchivo[index].nombreCompleto);
                 escribir.WriteLine(usuarioArchivo[index].foto);
+                escribir.WriteLine(usuarioArchivo[index].fecha);
+
             }
 
-            usuNue.nombreCompleto = nombre;usuNue.nickname = nick;usuNue.pass = contraseña;usuNue.fecha = feecha;usuNue.foto = pick;
-            escribir.WriteLine(usuNue.nombreCompleto); escribir.WriteLine(usuNue.nickname); escribir.WriteLine(usuNue.pass);
-            escribir.WriteLine(usuNue.fecha); escribir.WriteLine(usuNue.foto);
+            usuNue.nombreCompleto = nombre;
+            usuNue.nickname = nick;
+            usuNue.pass = contraseña;
+            usuNue.fecha = feecha;usuNue.foto = pick;
+            escribir.WriteLine(usuNue.pass);
+            escribir.WriteLine(usuNue.nickname);
+            escribir.WriteLine(usuNue.nombreCompleto);
+            escribir.WriteLine(usuNue.foto);
+            escribir.WriteLine(usuNue.fecha); 
             escribir.Close();
         }
 
