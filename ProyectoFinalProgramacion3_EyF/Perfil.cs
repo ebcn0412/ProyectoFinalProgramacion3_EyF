@@ -18,6 +18,7 @@ namespace ProyectoFinalProgramacion3_EyF
         Usuario usu = new Usuario();
         Usuario var;
         bool cambio = true;
+        int numero = 1;
         public Perfil()
         {
             InitializeComponent();
@@ -72,7 +73,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Principal salto = new Principal();
+            Login salto = new Login();
             salto.Show();
             this.Hide();
         }
@@ -114,7 +115,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void Perfil_Load(object sender, EventArgs e)
         {
-            if (cambio ==true)
+            if (cambio == true)
             {
                 cargaAvatar();
                 publicaciones();

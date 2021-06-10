@@ -38,10 +38,11 @@ namespace ProyectoFinalProgramacion3_EyF
             InitializeComponent();
             miLista.insertarAlFinal(datoUsuario);
             infoUsuario();
-            if(bandera == true)
+            if (bandera == true)
             {
                 banderaPrincipal = false;
             }
+            
         }
         public void cargarUsuario()
         {
@@ -184,14 +185,14 @@ namespace ProyectoFinalProgramacion3_EyF
                 cargaAvatar();
                 publicaciones();
             }
-            else if(banderaPrincipal == true)
+            else
             {
                 cargaAvatar();
-                publicaciones();
+
             }
-                
-            
-    
+
+
+
 
         }
         public void infoUsuario()

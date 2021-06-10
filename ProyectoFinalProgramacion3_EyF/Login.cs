@@ -22,10 +22,11 @@ namespace ProyectoFinalProgramacion3_EyF
         {
             InitializeComponent();
         }
+
         public Login(bool vieneDePrincipal)
         {
             InitializeComponent();
-            if(vieneDePrincipal == true)
+            if (vieneDePrincipal == true)
             {
                 bandera = true;
             }
@@ -59,7 +60,7 @@ namespace ProyectoFinalProgramacion3_EyF
                 {
                     MessageBox.Show("Bienvenido Usuario", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     data = usuInfo.buscarDatosCompletos(usu);
-                    Principal irA = new Principal(data,bandera);
+                    Principal irA = new Principal(data, bandera);
                     this.Hide();
                     irA.Show();
                 }
