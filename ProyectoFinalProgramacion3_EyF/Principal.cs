@@ -33,11 +33,15 @@ namespace ProyectoFinalProgramacion3_EyF
         {
             InitializeComponent();
         }
-        public Principal(object datoUsuario)
+        public Principal(object datoUsuario,bool otroUs)
         {
             InitializeComponent();
             miLista.insertarAlFinal(datoUsuario);
             infoUsuario();
+            if(otroUs == true)
+            {
+                
+            }
         }
         public void cargarUsuario()
         {
@@ -122,11 +126,27 @@ namespace ProyectoFinalProgramacion3_EyF
             {
                 contador++;
                 string ruta = openFileDialog1.FileName;
-                panel3.LoadAsync(@"" + ruta);
-                TextWriter escribirDato = new StreamWriter("publicaciones.txt");
-                escribirDato.Write(ruta);
+                StreamWriter escribirDato = new StreamWriter("publicaciones.txt",true);
                 escribirDato.WriteLine(contador);
+                escribirDato.WriteLine(ruta);
                 escribirDato.Close();
+
+
+                switch (contador)
+                {
+                    case 1:
+                        pictureBox5.LoadAsync(@"" + ruta);
+                        pictureBox5.BorderStyle = BorderStyle.FixedSingle;
+                        break;
+                    case 2:
+                        pictureBox6.LoadAsync(@"" + ruta);
+                        pictureBox6.BorderStyle = BorderStyle.FixedSingle;
+                        break;
+                    case 3:
+                        pictureBox7.LoadAsync(@"" + ruta);
+                        pictureBox7.BorderStyle = BorderStyle.FixedSingle;
+                        break;
+                }
             }
         }
 

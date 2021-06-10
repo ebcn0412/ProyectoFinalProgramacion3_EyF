@@ -46,12 +46,6 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (bandera == false)
-            {
-                MessageBox.Show("PRESIONE PRIMERO EN EL BOTON DE CARGAR XML");
-            }
-            else if (bandera == true)
-            {
                 //boton para agregar
                 usu = new Usuario(textBox2.Text, textBox1.Text);
 
@@ -61,14 +55,14 @@ namespace ProyectoFinalProgramacion3_EyF
                 {
                     MessageBox.Show("Bienvenido Usuario", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     data = usuInfo.buscarDatosCompletos(usu);
-                    Principal irA = new Principal(data);
+                    Principal irA = new Principal(data,bandera);
                     this.Hide();
                     irA.Show();
                 }
 
                 else { MessageBox.Show("No esta registrado en nuestros registros", "Error al iniciar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
-            }
+            
             //boton para agregar
             
 
@@ -90,25 +84,15 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (bandera == false)
-            {
-                MessageBox.Show("PRESIONE PRIMERO EN EL BOTON DE CARGAR XML");
-            }
-            else if (bandera == true)
-            {
+
                 this.Hide();
                 Registro irRegistro = new Registro();
                 irRegistro.Show();
 
-            }
+            
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("ARCHIVO XML CARGADO CORRECTAMENTE");
-            bandera = true;
-        }
 
         private void Login_Load(object sender, EventArgs e)
         {

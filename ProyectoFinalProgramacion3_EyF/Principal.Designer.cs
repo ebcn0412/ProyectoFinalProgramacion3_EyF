@@ -215,10 +215,11 @@ namespace ProyectoFinalProgramacion3_EyF
             // 
             // panel3
             // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.pictureBox7);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Location = new System.Drawing.Point(57, 35);
+            this.panel3.Location = new System.Drawing.Point(57, 32);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(695, 901);
             this.panel3.TabIndex = 0;
@@ -228,6 +229,7 @@ namespace ProyectoFinalProgramacion3_EyF
             this.pictureBox5.Location = new System.Drawing.Point(42, 29);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(617, 246);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
             // 
@@ -236,6 +238,7 @@ namespace ProyectoFinalProgramacion3_EyF
             this.pictureBox6.Location = new System.Drawing.Point(42, 308);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(617, 246);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
             // 
@@ -244,6 +247,7 @@ namespace ProyectoFinalProgramacion3_EyF
             this.pictureBox7.Location = new System.Drawing.Point(42, 581);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(617, 246);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 2;
             this.pictureBox7.TabStop = false;
             // 
