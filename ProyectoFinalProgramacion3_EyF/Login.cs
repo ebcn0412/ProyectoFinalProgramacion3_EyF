@@ -17,16 +17,20 @@ namespace ProyectoFinalProgramacion3_EyF
         Usuario[] auxTexto;
         archivos info = new archivos();
         object data;
-        bool bandera;
+        bool bandera = false;
         public Login()
         {
             InitializeComponent();
         }
-        public Login(bool recibo)
+        public Login(bool vieneDePrincipal)
         {
             InitializeComponent();
-            bandera = recibo;
+            if(vieneDePrincipal == true)
+            {
+                bandera = true;
+            }
         }
+
 
 
         private void label1_Click(object sender, EventArgs e)

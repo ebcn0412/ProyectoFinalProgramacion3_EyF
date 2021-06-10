@@ -14,12 +14,21 @@ namespace ProyectoFinalProgramacion3_EyF
 {
     public partial class Perfil : Form
     {
-        string name, nick, contra, fecha, foto;
+        string name, nick, contra, fecha, foto, ruta,ruta2,ruta3;
         Usuario usu = new Usuario();
         Usuario var;
+        bool cambio = true;
         public Perfil()
         {
             InitializeComponent();
+        }
+        public Perfil(bool banderaPerfil)
+        {
+            InitializeComponent();
+            if (banderaPerfil == false)
+            {
+                cambio = false;
+            }
         }
         public void cargarUsuario()
         {
@@ -31,6 +40,43 @@ namespace ProyectoFinalProgramacion3_EyF
             fecha = leer.ReadLine();
             leer.Close();
         }
+        public void cargarPublicaciones()
+        {
+            TextReader leer = new StreamReader("publicaciones.txt");
+            ruta = leer.ReadLine();
+            ruta2 = leer.ReadLine();
+            leer.Close();
+        }
+        public void cargarPublicaciones2()
+        {
+            TextReader leer = new StreamReader("publicaciones.txt");
+            ruta = leer.ReadLine();
+            ruta2 = leer.ReadLine();
+            ruta3 = leer.ReadLine();
+            leer.Close();
+        }
+        public void publicaciones()
+        {
+            pictureBox2.WaitOnLoad = false;
+            cargarPublicaciones();
+            pictureBox3.LoadAsync(@"" + ruta);
+            pictureBox4.LoadAsync(@"" + ruta2);
+        }
+        public void publicaciones2()
+        {
+            pictureBox2.WaitOnLoad = false;
+            cargarPublicaciones2();
+            pictureBox3.LoadAsync(@"" + ruta3);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Principal salto = new Principal();
+            salto.Show();
+            this.Hide();
+        }
+
         public void cargaAvatar()
         {
             pictureBox2.WaitOnLoad = false;
@@ -68,7 +114,18 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void Perfil_Load(object sender, EventArgs e)
         {
-            cargaAvatar();
+            if (cambio ==true)
+            {
+                cargaAvatar();
+                publicaciones();
+            }
+            else
+            {
+                cargaAvatar();
+                publicaciones2();
+            }
+
+
         }
     }
 }

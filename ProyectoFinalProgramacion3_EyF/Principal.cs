@@ -22,9 +22,9 @@ namespace ProyectoFinalProgramacion3_EyF
         Usuario usu;
         usuData usuInfo = new usuData();
         nodoLD nodoList;
-        string name, nick, contra, fecha, foto;
+        string name, nick, contra, fecha, foto,ruta,ruta2;
         int contador = 0;
-        bool regreso = true;
+        bool banderaPrincipal = true;
         //Data_movies.ClsPelicula miPelicula;
         //Data_movies.ClsPelicula[] auxPeliculaTxt;
         //Data_movies.ClsPelicula[] auxPeliculaTxt2;
@@ -33,14 +33,14 @@ namespace ProyectoFinalProgramacion3_EyF
         {
             InitializeComponent();
         }
-        public Principal(object datoUsuario,bool otroUs)
+        public Principal(object datoUsuario,bool bandera)
         {
             InitializeComponent();
             miLista.insertarAlFinal(datoUsuario);
             infoUsuario();
-            if(otroUs == true)
+            if(bandera == true)
             {
-                
+                banderaPrincipal = false;
             }
         }
         public void cargarUsuario()
@@ -63,13 +63,13 @@ namespace ProyectoFinalProgramacion3_EyF
 
         public void irPerfil()
         {
-            Perfil salto = new Perfil();
+            Perfil salto = new Perfil(banderaPrincipal);
             salto.Show();
             this.Hide();
         }
         public void irLogin()
         {
-            Login salto = new Login(regreso);
+            Login salto = new Login(banderaPrincipal);
             salto.Show();
             this.Hide();
         }
@@ -106,17 +106,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void button4_Click(object sender, EventArgs e)
         {
-            usu = new Usuario(textBox1.Text);
-
-            if (usuInfo.buscarUsu(usu) != null)
-            {
-                MessageBox.Show("Bienvenido Usuario", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Perfil irA = new Perfil();
-                this.Hide();
-                irA.Show();
-            }
-
-            else { MessageBox.Show("No esta registrado en nuestros registros", "Error al iniciar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            //buscar usuario
 
         }
 
@@ -124,10 +114,16 @@ namespace ProyectoFinalProgramacion3_EyF
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                contador++;
+                if (banderaPrincipal == false)
+                {
+                    contador = 3;
+                }
+                else
+                {
+                    contador++;
+                }
                 string ruta = openFileDialog1.FileName;
                 StreamWriter escribirDato = new StreamWriter("publicaciones.txt",true);
-                escribirDato.WriteLine(contador);
                 escribirDato.WriteLine(ruta);
                 escribirDato.Close();
 
@@ -149,6 +145,22 @@ namespace ProyectoFinalProgramacion3_EyF
                 }
             }
         }
+        public void cargarPublicaciones()
+        {
+            TextReader leer = new StreamReader("publicaciones.txt");
+            ruta = leer.ReadLine();
+            ruta2 = leer.ReadLine();
+            leer.Close();
+        }
+        public void publicaciones()
+        {
+            pictureBox2.WaitOnLoad = false;
+            cargarPublicaciones();
+            pictureBox5.LoadAsync(@"" + ruta);
+            pictureBox5.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox6.LoadAsync(@"" + ruta2);
+            pictureBox6.BorderStyle = BorderStyle.FixedSingle;
+        }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
@@ -167,7 +179,18 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            cargaAvatar();
+            if (banderaPrincipal == false)
+            {
+                cargaAvatar();
+                publicaciones();
+            }
+            else if(banderaPrincipal == true)
+            {
+                cargaAvatar();
+                publicaciones();
+            }
+                
+            
     
 
         }
