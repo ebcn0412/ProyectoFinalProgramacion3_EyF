@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -45,12 +46,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblaltura = new System.Windows.Forms.Label();
+            this.errores = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errores)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,9 +65,9 @@
             this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(787, 0);
+            this.panel3.Location = new System.Drawing.Point(680, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(215, 515);
+            this.panel3.Size = new System.Drawing.Size(215, 514);
             this.panel3.TabIndex = 18;
             // 
             // groupBox3
@@ -93,6 +96,7 @@
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // label4
             // 
@@ -121,6 +125,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Agregar Dato";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnBuscar
             // 
@@ -133,6 +138,7 @@
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // btneliminar
             // 
@@ -145,6 +151,7 @@
             this.btneliminar.TabIndex = 3;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click_1);
             // 
             // groupBox2
             // 
@@ -200,6 +207,7 @@
             this.pre.TabStop = true;
             this.pre.Text = "Pre Orden";
             this.pre.UseVisualStyleBackColor = true;
+            this.pre.CheckedChanged += new System.EventHandler(this.pre_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -230,32 +238,38 @@
             this.lblaltura.TabIndex = 2;
             this.lblaltura.Text = "0";
             // 
+            // errores
+            // 
+            this.errores.ContainerControl = this;
+            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(2, 0);
+            this.panel1.Location = new System.Drawing.Point(7, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(779, 542);
+            this.panel1.Size = new System.Drawing.Size(667, 490);
             this.panel1.TabIndex = 19;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(3, 6);
+            this.panel2.Location = new System.Drawing.Point(20, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(756, 665);
+            this.panel2.Size = new System.Drawing.Size(4252, 464);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 515);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(895, 514);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Instagram";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel3.ResumeLayout(false);
@@ -265,6 +279,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errores)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -288,6 +303,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblaltura;
+        private System.Windows.Forms.ErrorProvider errores;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
     }

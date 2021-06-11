@@ -11,8 +11,7 @@ using System.Resources;
 using System.IO;
 using ProyectoFinalProgramacion3_EyF.DATOS;
 using ProyectoFinalProgramacion3_EyF;
-
-
+using ProyectoFinalProgramacion3_EyF.ARBOLAVL;
 
 namespace ProyectoFinalProgramacion3_EyF
 {
@@ -164,6 +163,16 @@ namespace ProyectoFinalProgramacion3_EyF
         private void label1_Click(object sender, EventArgs e)
         {
             irPerfil();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form1 salto = new Form1();
+            salto.Show();
+            this.Hide();
+            
+
+
         }
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
