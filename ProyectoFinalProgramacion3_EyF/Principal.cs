@@ -64,9 +64,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         public void irPerfil()
         {
-            Perfil salto = new Perfil(banderaPrincipal);
-            salto.Show();
-            this.Hide();
+          
         }
         public void irLogin()
         {
@@ -146,6 +144,47 @@ namespace ProyectoFinalProgramacion3_EyF
                 }
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            irPerfil();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            irPerfil();
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            irPerfil();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            irLogin();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            irLogin();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            irPerfil();
+        }
+
         public void cargarPublicaciones()
         {
             TextReader leer = new StreamReader("publicaciones.txt");
