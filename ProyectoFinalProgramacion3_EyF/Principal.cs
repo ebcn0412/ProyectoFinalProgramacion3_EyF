@@ -64,7 +64,9 @@ namespace ProyectoFinalProgramacion3_EyF
 
         public void irPerfil()
         {
-          
+            Perfil salto = new Perfil();
+            salto.Show();
+            this.Hide();
         }
         public void irLogin()
         {
