@@ -15,4 +15,5 @@ namespace ProyectoFinalProgramacion3_EyF.TABLAS_HASH
             Dato = vDato;
             Enlace = null;
         }
+    }
 }

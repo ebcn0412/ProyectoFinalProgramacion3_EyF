@@ -78,6 +78,13 @@ namespace ProyectoFinalProgramacion3_EyF
             this.Hide();
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Seguidores salto = new Seguidores();
+            salto.Show();
+
+        }
+
         public void cargaAvatar()
         {
             pictureBox2.WaitOnLoad = false;
@@ -115,6 +122,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void Perfil_Load(object sender, EventArgs e)
         {
+            label2.Text = "1"; label4.Text = "0"; label6.Text = "14";
             if (cambio == true)
             {
                 cargaAvatar();

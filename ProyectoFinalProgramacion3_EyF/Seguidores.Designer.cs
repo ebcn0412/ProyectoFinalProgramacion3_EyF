@@ -130,9 +130,9 @@ namespace ProyectoFinalProgramacion3_EyF
             this.label1.Font = new System.Drawing.Font("Bodoni MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(112, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 29);
+            this.label1.Size = new System.Drawing.Size(102, 29);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Seguidores";
+            this.label1.Text = "Seguidos";
             // 
             // pictureBox1
             // 
@@ -412,6 +412,7 @@ namespace ProyectoFinalProgramacion3_EyF
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Seguidores";
             this.Text = "Instagram";
+            this.Load += new System.EventHandler(this.Seguidores_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
