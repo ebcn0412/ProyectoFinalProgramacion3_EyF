@@ -58,6 +58,12 @@
     <Compile Include="DATOS\nodoLD.cs" />
     <Compile Include="DATOS\nodoLista.cs" />
     <Compile Include="DibujarAVL.cs" />
+    <Compile Include="Arbol Avl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arbol Avl.Designer.cs">
+      <DependentUpon>Arbol Avl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="TABLAS HASH\Lista.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="usuData.cs" />
+    <EmbeddedResource Include="Arbol Avl.resx">
+      <DependentUpon>Arbol Avl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
