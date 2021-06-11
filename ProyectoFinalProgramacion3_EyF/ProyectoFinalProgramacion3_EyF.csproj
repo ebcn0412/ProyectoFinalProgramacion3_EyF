@@ -94,6 +94,9 @@
     <Compile Include="Seguidos.Designer.cs">
       <DependentUpon>Seguidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="TABLAS HASH\Nodo.cs" />
+    <Compile Include="TABLAS HASH\Tabla.cs" />
+    <Compile Include="TABLAS HASH\Lista.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="usuData.cs" />
     <EmbeddedResource Include="Login.resx">
