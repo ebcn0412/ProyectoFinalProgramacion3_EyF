@@ -33,6 +33,14 @@ namespace ProyectoFinalProgramacion3_EyF
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,17 +74,13 @@ namespace ProyectoFinalProgramacion3_EyF
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel4.SuspendLayout();
@@ -97,10 +101,6 @@ namespace ProyectoFinalProgramacion3_EyF
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -134,6 +134,85 @@ namespace ProyectoFinalProgramacion3_EyF
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(909, 413);
             this.panel2.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.pictureBox21);
+            this.panel6.Controls.Add(this.pictureBox20);
+            this.panel6.Controls.Add(this.pictureBox17);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Location = new System.Drawing.Point(564, 256);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(312, 270);
+            this.panel6.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Bodoni MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(77, 212);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 23);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Perfil";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bodoni MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(77, 139);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 23);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Perfil";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bodoni MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(77, 66);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 23);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Perfil";
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Location = new System.Drawing.Point(15, 201);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(56, 52);
+            this.pictureBox21.TabIndex = 9;
+            this.pictureBox21.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Location = new System.Drawing.Point(15, 123);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(56, 52);
+            this.pictureBox20.TabIndex = 8;
+            this.pictureBox20.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Location = new System.Drawing.Point(15, 50);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(56, 52);
+            this.pictureBox17.TabIndex = 7;
+            this.pictureBox17.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(25, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 20);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Sugerencias para ti";
             // 
             // panel5
             // 
@@ -191,7 +270,7 @@ namespace ProyectoFinalProgramacion3_EyF
             this.panel4.Controls.Add(this.pictureBox9);
             this.panel4.Location = new System.Drawing.Point(17, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(825, 87);
+            this.panel4.Size = new System.Drawing.Size(677, 87);
             this.panel4.TabIndex = 1;
             // 
             // pictureBox16
@@ -469,85 +548,6 @@ namespace ProyectoFinalProgramacion3_EyF
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.pictureBox21);
-            this.panel6.Controls.Add(this.pictureBox20);
-            this.panel6.Controls.Add(this.pictureBox17);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(564, 256);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(312, 270);
-            this.panel6.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(25, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 20);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Sugerencias para ti";
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Location = new System.Drawing.Point(15, 50);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(56, 52);
-            this.pictureBox17.TabIndex = 7;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Location = new System.Drawing.Point(15, 123);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(56, 52);
-            this.pictureBox20.TabIndex = 8;
-            this.pictureBox20.TabStop = false;
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Location = new System.Drawing.Point(15, 201);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(56, 52);
-            this.pictureBox21.TabIndex = 9;
-            this.pictureBox21.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bodoni MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(77, 66);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 23);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Perfil";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bodoni MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(77, 139);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 23);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Perfil";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Bodoni MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(77, 212);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 23);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Perfil";
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,6 +569,11 @@ namespace ProyectoFinalProgramacion3_EyF
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -591,11 +596,6 @@ namespace ProyectoFinalProgramacion3_EyF
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -22,13 +22,10 @@ namespace ProyectoFinalProgramacion3_EyF
         Usuario usu;
         usuData usuInfo = new usuData();
         nodoLD nodoList;
-        string name, nick, contra, fecha, foto,ruta,ruta2;
+        string name, nick, contra, fecha, foto,ruta,ruta2,
+            s1,s2,s3,p1,p2,p3;
         int contador = 0;
-        bool banderaPrincipal = true;
-        //Data_movies.ClsPelicula miPelicula;
-        //Data_movies.ClsPelicula[] auxPeliculaTxt;
-        //Data_movies.ClsPelicula[] auxPeliculaTxt2;
-        
+        bool banderaPrincipal = true;        
         public Principal()
         {
             InitializeComponent();
@@ -60,6 +57,10 @@ namespace ProyectoFinalProgramacion3_EyF
             pictureBox2.WaitOnLoad = false;
             cargarUsuario();
             pictureBox2.LoadAsync(@"" + foto);
+            pictureBox8.LoadAsync(@"" + foto);
+            label3.Text = nick;
+            label4.Text = name;
+
         }
 
         public void irPerfil()
@@ -122,9 +123,9 @@ namespace ProyectoFinalProgramacion3_EyF
                     contador++;
                 }
                 string ruta = openFileDialog1.FileName;
-                StreamWriter escribirDato = new StreamWriter("publicaciones.txt",true);
-                escribirDato.WriteLine(ruta);
-                escribirDato.Close();
+                StreamWriter info = new StreamWriter("publicaciones.txt",true);
+                info.WriteLine(ruta);
+                info.Close();
 
 
                 switch (contador)
@@ -214,24 +215,41 @@ namespace ProyectoFinalProgramacion3_EyF
             panel1.Visible = true;
 
         }
-
-
-
+        public void cargarSuger()
+        {
+            TextReader leer = new StreamReader("sugerencias.txt");
+            s1 = leer.ReadLine();
+            p1 = leer.ReadLine();
+            s2 = leer.ReadLine();
+            p2 = leer.ReadLine();
+            s3 = leer.ReadLine();
+            p3 = leer.ReadLine();
+            leer.Close();
+        }
+        public void suger()
+        {
+            cargarSuger();
+            pictureBox17.LoadAsync(@"" + p1);
+            pictureBox20.LoadAsync(@"" + p2);
+            pictureBox21.LoadAsync(@"" + p3);
+            label6.Text = s1;
+            label7.Text = s2;
+            label8.Text=s3;
+        }
         private void Principal_Load(object sender, EventArgs e)
         {
             if (banderaPrincipal == false)
             {
                 cargaAvatar();
                 publicaciones();
+                suger();
             }
             else
             {
                 cargaAvatar();
+                suger();
 
             }
-
-
-
 
         }
         public void infoUsuario()
@@ -242,49 +260,20 @@ namespace ProyectoFinalProgramacion3_EyF
 
             int a = 0;
 
-            TextWriter escribirDato = new StreamWriter("Temp.txt");
+            TextWriter info = new StreamWriter("Temp.txt");
 
             foreach (string words in palabras)
             {
                 a++;
                 if (a == 5)
                 {
-                    escribirDato.Write(words);
+                    info.Write(words);
                 }
                 else
-                    escribirDato.WriteLine(words);
+                    info.WriteLine(words);
             }
-            escribirDato.Close();
+            info.Close();
         }
-
-        //perfil
-        //public void cargarUsuario()
-        //{
-        //    TextReader leer = new StreamReader("Temp.txt");
-
-        //    name = leer.ReadLine();
-        //    nick = leer.ReadLine();
-        //    contra = leer.ReadLine();
-        //    fecha = leer.ReadLine();
-        //    foto = leer.ReadLine();
-        //    leer.Close();
-        //}
-
-        //public void cargaAvatar()
-        //{
-        //    panel1.Visible = false;
-        //    pictureBox2.WaitOnLoad = false;
-
-        //    cargarUsuario();
-
-        //    pictureBox2.LoadAsync(@"" + avaUser);
-
-        //    label4.Text = usUser;
-        //    label5.Text = nomUser;
-        //    label6.Text = corrUser;
-
-        //}
-
     } 
 }
 
