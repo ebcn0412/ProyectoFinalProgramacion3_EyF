@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ProyectoFinalProgramacion3_EyF
 {
     public class Usuario : comparador
@@ -24,10 +25,10 @@ namespace ProyectoFinalProgramacion3_EyF
         {
             lista = new listaEnlazada();
         }
-        public Usuario(string nick)
-        {
-            this.nickname = nick;
-        }
+        //public Usuario(string nick)
+        //{
+        //    this.nickname = nick;
+        //}
 
         //Contructor General
         public Usuario(string contraseña, string nick, string nombre, string pick, string vFecha )
@@ -75,6 +76,37 @@ namespace ProyectoFinalProgramacion3_EyF
                 return true;
             else
                 return false;
+        }
+
+        //cambio
+        public bool igualQue(object q)
+        {
+            Usuario objEstu = (Usuario)q;
+            return int.Parse(pass) == int.Parse(objEstu.pass);
+        }
+
+        public bool mayorIgualQue(object q)
+        {
+            Usuario objEstu = (Usuario)q;
+            return int.Parse(pass) >= int.Parse(objEstu.pass);
+        }
+
+        public bool mayorQue(object q)
+        {
+            Usuario objEstu = (Usuario)q;
+            return int.Parse(pass) > int.Parse(objEstu.pass);
+        }
+
+        public bool menorIgualQue(object q)
+        {
+            Usuario objEstu = (Usuario)q;
+            return int.Parse(pass) <= int.Parse(objEstu.pass);
+        }
+
+        public bool menorQue(object q)
+        {
+            Usuario objEstu = (Usuario)q;
+            return int.Parse(pass) < int.Parse(objEstu.pass);
         }
 
         public override string ToString()

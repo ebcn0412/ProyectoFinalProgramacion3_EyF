@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using ProyectoFinalProgramacion3_EyF.ARBOLAVL;
+
 
 namespace ProyectoFinalProgramacion3_EyF
 {
     public partial class Login : Form
     {
+        List<string> auxNick = new List<string>();
+        ArbolAvl miArbol = new ArbolAvl();
         Usuario usu;
         usuData usuInfo = new usuData();
         Usuario[] auxTexto;
@@ -48,6 +53,27 @@ namespace ProyectoFinalProgramacion3_EyF
         {
 
         }
+
+
+        //public void cargar()
+        //{
+        //    StreamReader archivo = new StreamReader("usuarios2.txt");
+        //    char delimitador = ',';
+        //    string linea;
+
+
+        //    while ((linea = archivo.ReadLine()) != null)
+        //    {
+        //        String[] aux = linea.Split(delimitador);
+        //        Usuario objUsuario = new Usuario(aux[0], aux[1], aux[2], aux[3],aux[4]);
+        //        auxNick.Add(aux[3]);
+        //        miArbol.insertarDato(objUsuario);
+
+        //    }
+        //    archivo.Close();
+        //    MessageBox.Show("todos los datos cargados al arbol");
+        //}
+    
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -101,7 +127,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            //cargar();
         }
     }
 }

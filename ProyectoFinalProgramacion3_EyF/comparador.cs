@@ -12,6 +12,9 @@ namespace ProyectoFinalProgramacion3_EyF
         bool usuarioIgual(object q);
         bool contraseñaIgual(object q);
         bool usuarioBuscar(object q);
+        bool igualQue(Object q);
+        bool menorQue(Object q);
+        bool mayorQue(Object q);
 
     }
 }

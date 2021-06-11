@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ARBOLAVL\ArbolAvl.cs" />
+    <Compile Include="ARBOLAVL\Logical.cs" />
+    <Compile Include="ARBOLAVL\Nodo.cs" />
+    <Compile Include="ARBOLAVL\NodoAvl.cs" />
     <Compile Include="archivos.cs" />
     <Compile Include="comparador.cs" />
     <Compile Include="DATOS\listaDoble.cs" />
