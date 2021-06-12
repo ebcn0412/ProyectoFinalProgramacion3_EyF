@@ -28,7 +28,7 @@ namespace ProyectoFinalProgramacion3_EyF
             set { arbol = value; }
         }
 
-        //Constructor
+
         public AVL(int valorNuevo, AVL izquierdo, AVL derecho, AVL padre)
         {
             valor = valorNuevo;
@@ -37,7 +37,7 @@ namespace ProyectoFinalProgramacion3_EyF
             NodoPadre = padre;
             altura = 0;
         }
-        //Propiedades
+
 
 
 
@@ -59,7 +59,6 @@ namespace ProyectoFinalProgramacion3_EyF
                 MessageBox.Show("Valor existente en el arbol", "Error", MessageBoxButtons.OK);
             }
 
-            //Rotaciones Simples o Dobles segun el caso
             if (Alturas(Raiz.NodoIzquierdo) - Alturas(Raiz.NodoDerecho) == 2)
             {
                 if (valorNuevo < Raiz.NodoIzquierdo.valor)

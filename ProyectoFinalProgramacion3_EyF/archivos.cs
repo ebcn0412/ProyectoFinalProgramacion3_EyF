@@ -18,67 +18,44 @@ namespace ProyectoFinalProgramacion3_EyF
             StreamReader reader = new StreamReader("usuarios.txt");
             int size = Convert.ToInt32(reader.ReadLine());
             usuarioArchivo = new Usuario[size];
-            for (int index = 0; index < usuarioArchivo.Length; index++)
+            for (int i = 0; i < usuarioArchivo.Length; i++)
             {
-                usuarioArchivo[index] = new Usuario();
-                usuarioArchivo[index].pass = reader.ReadLine();
-                usuarioArchivo[index].nickname = reader.ReadLine();
-                usuarioArchivo[index].nombreCompleto = reader.ReadLine();
-                usuarioArchivo[index].foto = reader.ReadLine();
-                usuarioArchivo[index].fecha = reader.ReadLine();
+                usuarioArchivo[i] = new Usuario();
+                usuarioArchivo[i].pass = reader.ReadLine();
+                usuarioArchivo[i].nickname = reader.ReadLine();
+                usuarioArchivo[i].nombreCompleto = reader.ReadLine();
+                usuarioArchivo[i].foto = reader.ReadLine();
+                usuarioArchivo[i].fecha = reader.ReadLine();
             }
             reader.Close();
         }
-
-        //Metodo para agregar un usuario
         public void AgregarUsuario(ref Usuario[] usuarioArchivo, string nombre, string nick, string contraseña,
             string feecha, string pick)
         {
             StreamWriter escribir = new StreamWriter("usuarios.txt");
             escribir.WriteLine(usuarioArchivo.Length + 1);
-            Usuario usuNue = new Usuario();
+            Usuario nuevo = new Usuario();
 
-            for (int index = 0; index < usuarioArchivo.Length; index++)
+            for (int i = 0; i < usuarioArchivo.Length; i++)
             {
-                escribir.WriteLine(usuarioArchivo[index].pass);
-                escribir.WriteLine(usuarioArchivo[index].nickname);
-                escribir.WriteLine(usuarioArchivo[index].nombreCompleto);
-                escribir.WriteLine(usuarioArchivo[index].foto);
-                escribir.WriteLine(usuarioArchivo[index].fecha);
+                escribir.WriteLine(usuarioArchivo[i].pass);
+                escribir.WriteLine(usuarioArchivo[i].nickname);
+                escribir.WriteLine(usuarioArchivo[i].nombreCompleto);
+                escribir.WriteLine(usuarioArchivo[i].foto);
+                escribir.WriteLine(usuarioArchivo[i].fecha);
 
             }
-
-            usuNue.nombreCompleto = nombre;
-            usuNue.nickname = nick;
-            usuNue.pass = contraseña;
-            usuNue.fecha = feecha;usuNue.foto = pick;
-            escribir.WriteLine(usuNue.pass);
-            escribir.WriteLine(usuNue.nickname);
-            escribir.WriteLine(usuNue.nombreCompleto);
-            escribir.WriteLine(usuNue.foto);
-            escribir.WriteLine(usuNue.fecha); 
+            nuevo.nombreCompleto = nombre;
+            nuevo.nickname = nick;
+            nuevo.pass = contraseña;
+            nuevo.fecha = feecha;nuevo.foto = pick;
+            escribir.WriteLine(nuevo.pass);
+            escribir.WriteLine(nuevo.nickname);
+            escribir.WriteLine(nuevo.nombreCompleto);
+            escribir.WriteLine(nuevo.foto);
+            escribir.WriteLine(nuevo.fecha); 
             escribir.Close();
         }
-
-       
-
-
-
-        ////Metodo para mostrar la informacion de un txt
-        //public static void MostrarTodo(Usuario[] usuarioArchivo)
-        //{
-        //    for (int index = 0; index < usuarioArchivo.Length; index++)
-        //    {
-        //        Console.WriteLine("Id: \t\t{0}", index);
-        //        usuarioArchivo[index].MostrarInformacion();
-        //    }
-
-        //}
-
-
-
-
-        //Falta Administrador
     }
 }
 

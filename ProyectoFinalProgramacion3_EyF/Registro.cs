@@ -15,7 +15,7 @@ namespace ProyectoFinalProgramacion3_EyF
         Usuario usu;
         usuData datoUsuario = new usuData();
         usuData auxDatoUsuario;
-        Usuario[] auxTexto;
+        Usuario[] varTex;
         archivos info = new archivos();
         string variable;
         public Registro()
@@ -25,16 +25,13 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //boton registrar
             usu = new Usuario(textBox1.Text, textBox2.Text, textBox4.Text, textBox3.Text,variable);
 
             agregarUsuarioR();
 
             datoUsuario.insertarDatoUsuario(usu);
-
-                //Ingreso de usuario a mi Txt
-                info.CargarDatos(ref auxTexto);
-                info.AgregarUsuario(ref auxTexto, textBox4.Text, textBox2.Text, textBox1.Text,variable, textBox3.Text);
+                info.CargarDatos(ref varTex);
+                info.AgregarUsuario(ref varTex, textBox4.Text, textBox2.Text, textBox1.Text,variable, textBox3.Text);
                 MessageBox.Show("La cuenta se ha creado exitosamente !!");
                 cerrar();
           
@@ -43,20 +40,13 @@ namespace ProyectoFinalProgramacion3_EyF
         public void agregarUsuarioR()
         {
             auxDatoUsuario = new usuData();
-            info.CargarDatos(ref auxTexto);
-
-
-            //MostrarTodo(miUsuarioNuevo2);
-
+            info.CargarDatos(ref varTex);
             Usuario miUsuario;
 
-            for (int i = 0; i < auxTexto.Length; i++)
+            for (int i = 0; i < varTex.Length; i++)
             {
-                miUsuario = new Usuario(auxTexto[i].pass, auxTexto[i].nickname, auxTexto[i].nombreCompleto, auxTexto[i].foto,
-                    auxTexto[i].fecha);
-
-
-                //La informacion es leida del txt y se inserta denuevo a otra lista
+                miUsuario = new Usuario(varTex[i].pass, varTex[i].nickname, varTex[i].nombreCompleto, varTex[i].foto,
+                    varTex[i].fecha);
                 auxDatoUsuario.insertarDatoUsuario(miUsuario);
             }
         }

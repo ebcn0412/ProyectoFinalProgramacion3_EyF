@@ -8,14 +8,11 @@ namespace ProyectoFinalProgramacion3_EyF.DATOS
 {
     public class nodoLD
     {
-        //Se crea dos variables de tipo nodo publico
+
         public nodoLD siguienteNodo;
         public nodoLD anterioNodo;
 
-        //Variable para la insercion de la informacion
         public object datoNodo;
-
-        //Contructores
 
         public nodoLD(object datoEntrada)
         {

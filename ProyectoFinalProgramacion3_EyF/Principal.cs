@@ -107,7 +107,6 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //buscar usuario
 
         }
 

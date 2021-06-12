@@ -40,7 +40,7 @@ namespace ProyectoFinalProgramacion3_EyF.DATOS
 
         }
 
-        //Busca el correo y la contraseña del usuario
+
         public nodoLD buscarUsuario(object codigoUsuario)
         {
             comparador dato;
@@ -51,7 +51,6 @@ namespace ProyectoFinalProgramacion3_EyF.DATOS
         {
             if (usuario == null)
             {
-                //throw new Exception("No encontrado el nodo con la clave");
                 return null;
             }
             else
@@ -73,7 +72,6 @@ namespace ProyectoFinalProgramacion3_EyF.DATOS
         {
             if (usuario == null)
             {
-                //throw new Exception("No encontrado el nodo con la clave");
                 return null;
             }
             else

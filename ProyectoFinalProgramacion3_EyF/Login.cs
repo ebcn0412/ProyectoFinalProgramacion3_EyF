@@ -15,11 +15,10 @@ namespace ProyectoFinalProgramacion3_EyF
 {
     public partial class Login : Form
     {
-        List<string> auxNick = new List<string>();
         ArbolAvl miArbol = new ArbolAvl();
         Usuario usu;
         usuData usuInfo = new usuData();
-        Usuario[] auxTexto;
+        Usuario[] varTex;
         archivos info = new archivos();
         object data;
         bool bandera = false;
@@ -53,26 +52,6 @@ namespace ProyectoFinalProgramacion3_EyF
         {
 
         }
-
-
-        //public void cargar()
-        //{
-        //    StreamReader archivo = new StreamReader("usuarios2.txt");
-        //    char delimitador = ',';
-        //    string linea;
-
-
-        //    while ((linea = archivo.ReadLine()) != null)
-        //    {
-        //        String[] aux = linea.Split(delimitador);
-        //        Usuario objUsuario = new Usuario(aux[0], aux[1], aux[2], aux[3],aux[4]);
-        //        auxNick.Add(aux[3]);
-        //        miArbol.insertarDato(objUsuario);
-
-        //    }
-        //    archivo.Close();
-        //    MessageBox.Show("todos los datos cargados al arbol");
-        //}
     
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,7 +63,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
                 if (usuInfo.buscarDatosCompletos(usu) != null)
                 {
-                    MessageBox.Show("Bienvenido Usuario", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bienvenido", "Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     data = usuInfo.buscarDatosCompletos(usu);
                     Principal irA = new Principal(data, bandera);
                     this.Hide();
@@ -94,21 +73,16 @@ namespace ProyectoFinalProgramacion3_EyF
                 else { MessageBox.Show("No esta registrado en nuestros registros", "Error al iniciar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             
-            //boton para agregar
-            
 
         }
 
         void usuarioInfo()
         {
-            info.CargarDatos(ref auxTexto);
-            //MostrarTodo(miUsuarioNuevo2);
-
+            info.CargarDatos(ref varTex);
             Usuario miUsuario;
-            for (int index = 0; index < auxTexto.Length; index++)
+            for (int i = 0; i < varTex.Length; i++)
             {
-                miUsuario = new Usuario(auxTexto[index].pass, auxTexto[index].nickname, auxTexto[index].nombreCompleto, auxTexto[index].foto,  auxTexto[index].fecha);
-                //Se la informacion leida de un txt se inserta denuevo a otra lista
+                miUsuario = new Usuario(varTex[i].pass, varTex[i].nickname, varTex[i].nombreCompleto, varTex[i].foto,  varTex[i].fecha);
                 usuInfo.insertarDatoUsuario(miUsuario);
             }
         }
@@ -116,18 +90,16 @@ namespace ProyectoFinalProgramacion3_EyF
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-                this.Hide();
-                Registro irRegistro = new Registro();
-                irRegistro.Show();
-
-            
+            this.Hide();
+            Registro irRegistro = new Registro();
+            irRegistro.Show();
 
         }
 
 
         private void Login_Load(object sender, EventArgs e)
         {
-            //cargar();
+
         }
     }
 }

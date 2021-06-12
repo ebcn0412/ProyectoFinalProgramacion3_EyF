@@ -18,7 +18,6 @@ namespace ProyectoFinalProgramacion3_EyF
         Usuario usu = new Usuario();
         Usuario var;
         bool cambio = true;
-        int numero = 1;
         public Perfil()
         {
             InitializeComponent();
@@ -101,7 +100,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ////boton de buscar
+
 
         }
 

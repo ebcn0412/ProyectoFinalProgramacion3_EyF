@@ -11,7 +11,6 @@ namespace ProyectoFinalProgramacion3_EyF
     public class Usuario : comparador
     {
 
-        //Se crear los atributos necesarios para el ingreso de informacion  
         public string nombreCompleto { get; set; }
         public string nickname { get; set; }
         public string pass { get; set; }
@@ -25,12 +24,7 @@ namespace ProyectoFinalProgramacion3_EyF
         {
             lista = new listaEnlazada();
         }
-        //public Usuario(string nick)
-        //{
-        //    this.nickname = nick;
-        //}
 
-        //Contructor General
         public Usuario(string contraseña, string nick, string nombre, string pick, string vFecha )
         {
             this.pass = contraseña;
@@ -48,9 +42,6 @@ namespace ProyectoFinalProgramacion3_EyF
             this.pass = contraseñaUsu;
 
         }
-
-
-        //Compara que la contraseña introducida se igual a la introducida
         public bool contraseñaIgual(object q)
         {
             Usuario us2 = (Usuario)q;
@@ -78,7 +69,6 @@ namespace ProyectoFinalProgramacion3_EyF
                 return false;
         }
 
-        //cambio
         public bool igualQue(object q)
         {
             Usuario objEstu = (Usuario)q;
