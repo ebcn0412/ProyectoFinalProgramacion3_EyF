@@ -21,15 +21,15 @@ namespace ProyectoFinalProgramacion3_EyF
         Usuario usu;
         usuData usuInfo = new usuData();
         nodoLD nodoList;
-        string name, nick, contra, fecha, foto,ruta,ruta2,
-            s1,s2,s3,p1,p2,p3;
+        string name, nick, contra, fecha, foto, ruta, ruta2,
+            s1, s2, s3, p1, p2, p3;
         int contador = 0;
-        bool banderaPrincipal = true;        
+        bool banderaPrincipal = true;
         public Principal()
         {
             InitializeComponent();
         }
-        public Principal(object datoUsuario,bool bandera)
+        public Principal(object datoUsuario, bool bandera)
         {
             InitializeComponent();
             miLista.insertarAlFinal(datoUsuario);
@@ -38,7 +38,7 @@ namespace ProyectoFinalProgramacion3_EyF
             {
                 banderaPrincipal = false;
             }
-            
+
         }
         public void cargarUsuario()
         {
@@ -107,6 +107,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void button4_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("SE ENCONTRO EL USUARIO");
 
         }
 

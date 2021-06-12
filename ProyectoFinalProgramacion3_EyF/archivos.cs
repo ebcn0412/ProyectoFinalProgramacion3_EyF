@@ -29,8 +29,8 @@ namespace ProyectoFinalProgramacion3_EyF
             }
             reader.Close();
         }
-        public void AgregarUsuario(ref Usuario[] usuarioArchivo, string nombre, string nick, string contraseña,
-            string feecha, string pick)
+        public void AgregarUsuario(ref Usuario[] usuarioArchivo, string contraseña, string nick, string nombre,
+            string pick, string feecha)
         {
             StreamWriter escribir = new StreamWriter("usuarios.txt");
             escribir.WriteLine(usuarioArchivo.Length + 1);
@@ -45,10 +45,11 @@ namespace ProyectoFinalProgramacion3_EyF
                 escribir.WriteLine(usuarioArchivo[i].fecha);
 
             }
-            nuevo.nombreCompleto = nombre;
-            nuevo.nickname = nick;
             nuevo.pass = contraseña;
-            nuevo.fecha = feecha;nuevo.foto = pick;
+            nuevo.nickname = nick;
+            nuevo.nombreCompleto = nombre;
+            nuevo.foto = pick;
+            nuevo.fecha = feecha;
             escribir.WriteLine(nuevo.pass);
             escribir.WriteLine(nuevo.nickname);
             escribir.WriteLine(nuevo.nombreCompleto);

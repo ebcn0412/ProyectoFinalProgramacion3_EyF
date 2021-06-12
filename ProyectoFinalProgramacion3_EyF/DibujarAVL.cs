@@ -155,6 +155,7 @@ namespace ProyectoFinalProgramacion3_EyF
             if (Raiz == null)
                 MessageBox.Show("Arbol AVL vacio", "Error", MessageBoxButtons.OK);
             else
+                MessageBox.Show("se encontro el usuario");
                 Raiz.buscar(x, Raiz);
         }
     }

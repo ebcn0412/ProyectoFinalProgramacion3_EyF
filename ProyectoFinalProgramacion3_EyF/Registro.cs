@@ -25,7 +25,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            usu = new Usuario(textBox1.Text, textBox2.Text, textBox4.Text, textBox3.Text,variable);
+            usu = new Usuario(textBox4.Text, textBox2.Text, textBox1.Text,variable, textBox3.Text);
 
             agregarUsuarioR();
 
@@ -60,7 +60,7 @@ namespace ProyectoFinalProgramacion3_EyF
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
